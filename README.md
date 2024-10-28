@@ -67,5 +67,6 @@ Auth0 can integrate with Active Directory via an AD/LDAP connector running on a 
 * Download the Auth0 Active Directory/LDAP Connector for Windows (MSI) file - Auth0 Active Directory/LDAP Connector for Windows and open
 * When prompted by Windows Defender SmartScreen, select “more info” and then “run anyway”
 
+![screenshot](auth0_2.jpg)
 
 
