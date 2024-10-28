@@ -5,7 +5,9 @@ Configuring AWS Research and Engineering Studio with Auth0 for SSO authenticatio
 
 Note: When you upgrade your environment to a new version of RES, you may have to reconnect the Auth0 integration by replacing URLs (outlined in steps Create an Auth0 Application for RES and onward). You may also need to point DNS records for portal and vdi webpages to any new application or network load balancers.
 
-# Summary: 
+# Instructions:
+
+## Summary
 Auth0 can integrate with Active Directory via an AD/LDAP connector running on a Windows server that’s domain joined to your AD. A summary of the steps are below:
 
 * Create an Auth0 account, if you do not have one existing.
@@ -69,4 +71,17 @@ Auth0 can integrate with Active Directory via an AD/LDAP connector running on a 
 
 ![screenshot](auth0_2.jpg)
 
+* Run the installer, leave all options as default, and install
+* When prompted, enter the Ticket URL that you copied previously.
 
+![screenshot](auth0_3.jpg)
+
+* The Windows Installer should prompt you with the screen below with your pre-populated LDAP Connection String and Base DN. PLEASE REMOVE THE IP IN THE LDAP CONNECTION STRING PRIOR TO “corp.res.com” (for example - IP-C12345678)
+
+![screenshot](auth0_4.jpg)
+
+* Enter ServiceAccount as the username and enter the password to your ServiceAccount.
+
+![screenshot](auth0_5.jpg)
+
+* Your connection should now show as “Online” in the Auth0 console.
