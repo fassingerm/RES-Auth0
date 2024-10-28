@@ -14,12 +14,12 @@ Auth0 can integrate with Active Directory via an AD/LDAP connector running on a 
 * Create an Application for Research and Engineering Studio in the Auth0 console.
 * Configure your AD/LDAP Connector to use SAML 2.0 to integrate with your RES application.
 
-# Modify Security Group Settings
+## 1. Modify Security Group Settings
 * Add an inbound security group rule to both your AdDomainWindowsNode and AdDomainAdminNode instances
     * Type: LDAP
     * Source: 0.0.0.0/0
  
-# Deploy a Auth0-Connect-Node Instance
+## 2. Deploy a Auth0-Connect-Node Instance
 * Choose Launch an Instance
     * Name: (ex. Auth0-Connect-Node)
     * AMI: Microsoft Windows Server 2019 Base
@@ -34,7 +34,7 @@ Auth0 can integrate with Active Directory via an AD/LDAP connector running on a 
     * Port: 443
     * Source: 0.0.0.0/0
 
-# Access Auth0-Connect-Node
+## 3. Access Auth0-Connect-Node
 * Log in to the new Auth0-Connect-Node as an the RES Admin
     * Choose Connect
     * Navigate to the RDP Client tab
@@ -42,18 +42,18 @@ Auth0 can integrate with Active Directory via an AD/LDAP connector running on a 
     * Choose Fleet Manager Remote Desktop
     * Add the user credentials for your Admin user of RES
 
-# Change Security Settings on Desktop
+## 4. Change Security Settings on Desktop
 * Open the Windows Start menu
 * Click on Server Manager
 * Click Local Server
 * Select “On” next to IE Enhanced Security Configuration 
 * Select “Off” for both Administrators and Users and Save
 
-# Install Google Chrome (you can continue to use Explorer; however, this process is optimized on Google Chrome)
+## 5. Install Google Chrome (you can continue to use Explorer; however, this process is optimized on Google Chrome)
 * Navigate to Internet Explorer and download Google Chrome
     * If Internet Explorer asks about Security Settings, select “Do not use recommended settings”.
 
-# Create an Enterprise Connection in Auth0
+## 6. Create an Enterprise Connection in Auth0
 * From Internet Explorer or Google Chrome, open Auth0 and log in to your account
 * Navigate to Auth0 Dashboard > Authentication > Enterprise and select Active Directory/LDAP
 * Select “Create Connection” 
@@ -61,7 +61,11 @@ Auth0 can integrate with Active Directory via an AD/LDAP connector running on a 
 * Leave the remaining option as default and Save
 * From the resulting screen, copy the Provisioning Ticket URL and select “Install for Windows”
 
+![screenshot](auth0_1.jpg)
 
+## 7. Install and Configure the AD/LDAP Connector (reference)
+* Download the Auth0 Active Directory/LDAP Connector for Windows (MSI) file - Auth0 Active Directory/LDAP Connector for Windows and open
+* When prompted by Windows Defender SmartScreen, select “more info” and then “run anyway”
 
 
 
