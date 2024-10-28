@@ -85,3 +85,26 @@ Auth0 can integrate with Active Directory via an AD/LDAP connector running on a 
 ![screenshot](auth0_5.jpg)
 
 * Your connection should now show as “Online” in the Auth0 console.
+
+## 8. Create an Auth0 Application for RES
+* In the Auth0 console, navigate to the Applications page on the left-hand side
+* Click “Create Application” and specifically, Regular Web Application
+* Navigate to the Settings tab
+    * Change title to Research and Engineering Studio 
+    * Application Login URI: Add the domain URL for your RES web app (ex. https://portal.res.alias.people.aws.dev)
+    * Allowed Callback URLs: Add your RES SAML Redirect URL
+        * Can be found in your RES Web App portal:
+            * Tip: If you the additional layer of Auth0 is preventing your from accessing RES, add “/?sso=false” at the end of the URL
+            * Log in as Admin or ClusterAdmin
+            * Go to the Environment Management tab and then the General Settings page
+            * Select the Identity Provider tab and copy your SAML Redirect URL
+    * Allowed Logout URLs:
+        * Add your Cognito Domain (found in the Cognito console or you can use the Domain URL in RES Identity Provider Tab) and add “/logout”
+    * Click Save Changes
+* Navigate to the Addons tab
+    * Toggle on the SAML2 Web App option
+    * Navigate to the Settings tab
+    * Replace the Settings code block with the below:
+
+![screenshot](auth0_6.jpg)
+
