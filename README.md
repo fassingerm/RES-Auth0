@@ -106,5 +106,44 @@ Auth0 can integrate with Active Directory via an AD/LDAP connector running on a 
     * Navigate to the Settings tab
     * Replace the Settings code block with the below:
 
-![screenshot](auth0_6.jpg)
+```
+{
+  "audience": "urn:foo",
+  "recipient": "http://foo",
+  "mappings": {
+    "email": "email"
+  },
+  "createUpnClaim": true,
+  "passthroughClaimsWithNoMapping": true,
+  "mapUnknownClaimsAsIs": false,
+  "mapIdentities": false,
+  "signatureAlgorithm": "rsa-sha1",
+  "digestAlgorithm": "sha1",
+  "destination": "https://foo",
+  "lifetimeInSeconds": 3600,
+  "signResponse": false,
+  "typedAttributes": true,
+  "includeAttributeNameFormat": true,
+  "nameIdentifierFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
+  "nameIdentifierProbes": [
+    "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"
+  ],
+  "authnContextClassRef": "urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified",
+  "logout": {
+    "callback": "http://foo/logout",
+    "slo_enabled": true
+  },
+  "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+}
+```
+    * Please replace the following lines accordingly:
+        * Audience: Replace with urn:amazon:cognito:sp:user-pool-id (add your own user-pool-id - this can be found in your RES Web App - login as Admin or ClusterAdmin, navigate to Environment Management → General Settings → Identity Provider)
+        * Recipient: Replace with your SAML Redirect URL (this can be found in your RES Web App - login as Admin or ClusterAdmin, navigate to Environment Management → General Settings → Identity Provider)
+        * Destination: Add the domain URL for your RES web app (ex. https://portal.res.alias.people.aws.dev)
+        * Callback (under logout section): Add your Cognito Domain (found in the Cognito console or you can use the Domain URL in RES Identity Provider Tab) and add “/logout”
+    * Click Enable and then Save
 
+* Navigate to the Usage tab 
+    * Where you see Identity Provider Metadata, right-click the Download hyperlink and click Copy Link Address
+
+![screenshot](auth0_6.jpg)
