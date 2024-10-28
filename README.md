@@ -63,7 +63,7 @@ Note: When you upgrade your environment to a new version of RES, you may have to
 
 ![screenshot](auth0_1.jpg)
 
-## 7. Install and Configure the AD/LDAP Connector (reference)
+## 7. Install and Configure the AD/LDAP Connector
 * Download the Auth0 Active Directory/LDAP Connector for Windows (MSI) file - Auth0 Active Directory/LDAP Connector for Windows and open
 * When prompted by Windows Defender SmartScreen, select “more info” and then “run anyway”
 
