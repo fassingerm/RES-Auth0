@@ -3,8 +3,6 @@ Configuring AWS Research and Engineering Studio with Auth0 for SSO authenticatio
 
 # How to configure Auth0 to work with RES
 
-# Instructions:
-
 ## Summary
 Auth0 can integrate with Active Directory via an AD/LDAP connector running on a Windows server that’s domain joined to your AD. A summary of the steps are below:
 
