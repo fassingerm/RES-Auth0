@@ -154,11 +154,11 @@ Next:
 
 ![screenshot](auth0_7.jpg)
 
-    * Change the following details:
-        * Provider Name: Enter a provider name like auth0 (keep provider names in lower case)
-        * Select “Enter metadata document endpoint URL”: Paste the address copied from the Identity Provider Metadata
-        * Provider Email Attribute: Enter "email"
-        * Click Submit
+* Change the following details:
+  * Provider Name: Enter a provider name like auth0 (keep provider names in lower case)
+  * Select “Enter metadata document endpoint URL”: Paste the address copied from the Identity Provider Metadata
+  * Provider Email Attribute: Enter "email"
+  * Click Submit
 
 * Back in Auth0, navigate to the Connections tab
     * Ensure all Database and Social Connections are toggled OFF and the connection your just created is toggled ON under Enterprise
