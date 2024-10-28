@@ -132,7 +132,9 @@ Note: When you upgrade your environment to a new version of RES, you may have to
     "slo_enabled": true
   },
   "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-}```
+}
+```
+
     * Please replace the following lines accordingly:
         * Audience: Replace with urn:amazon:cognito:sp:user-pool-id (add your own user-pool-id - this can be found in your RES Web App - login as Admin or ClusterAdmin, navigate to Environment Management → General Settings → Identity Provider)
         * Recipient: Replace with your SAML Redirect URL (this can be found in your RES Web App - login as Admin or ClusterAdmin, navigate to Environment Management → General Settings → Identity Provider)
