@@ -14,7 +14,7 @@ Auth0 can integrate with Active Directory via an AD/LDAP connector running on a 
 * Create an Application for Research and Engineering Studio in the Auth0 console.
 * Configure your AD/LDAP Connector to use SAML 2.0 to integrate with your RES application.
 
-### Note: When you upgrade your environment to a new version of RES, you may have to reconnect the Auth0 integration by replacing URLs (outlined in steps Create an Auth0 Application for RES and onward). You may also need to point DNS records for portal and vdi webpages to any new application or network load balancers.
+Note: When you upgrade your environment to a new version of RES, you may have to reconnect the Auth0 integration by replacing URLs (outlined in steps Create an Auth0 Application for RES and onward). You may also need to point DNS records for portal and vdi webpages to any new application or network load balancers.
 
 ## 1. Modify Security Group Settings
 * Add an inbound security group rule to both your AdDomainWindowsNode and AdDomainAdminNode instances
