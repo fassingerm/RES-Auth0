@@ -134,13 +134,14 @@ Note: When you upgrade your environment to a new version of RES, you may have to
   "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
 }
 ```
+Next:
+* Please replace the following lines accordingly:
+  * Audience: Replace with urn:amazon:cognito:sp:user-pool-id (add your own user-pool-id - this can be found in your RES Web App - login as Admin or ClusterAdmin, navigate to Environment Management → General Settings → Identity Provider)
+  * Recipient: Replace with your SAML Redirect URL (this can be found in your RES Web App - login as Admin or ClusterAdmin, navigate to Environment Management → General Settings → Identity Provider)
+  * Destination: Add the domain URL for your RES web app (ex. https://portal.res.alias.people.aws.dev)
+  * Callback (under logout section): Add your Cognito Domain (found in the Cognito console or you can use the Domain URL in RES Identity Provider Tab) and add “/logout”
+  * Click Enable and then Save
 
-    * Please replace the following lines accordingly:
-        * Audience: Replace with urn:amazon:cognito:sp:user-pool-id (add your own user-pool-id - this can be found in your RES Web App - login as Admin or ClusterAdmin, navigate to Environment Management → General Settings → Identity Provider)
-        * Recipient: Replace with your SAML Redirect URL (this can be found in your RES Web App - login as Admin or ClusterAdmin, navigate to Environment Management → General Settings → Identity Provider)
-        * Destination: Add the domain URL for your RES web app (ex. https://portal.res.alias.people.aws.dev)
-        * Callback (under logout section): Add your Cognito Domain (found in the Cognito console or you can use the Domain URL in RES Identity Provider Tab) and add “/logout”
-    * Click Enable and then Save
 
 * Navigate to the Usage tab 
     * Where you see Identity Provider Metadata, right-click the Download hyperlink and click Copy Link Address
