@@ -147,3 +147,22 @@ Auth0 can integrate with Active Directory via an AD/LDAP connector running on a 
     * Where you see Identity Provider Metadata, right-click the Download hyperlink and click Copy Link Address
 
 ![screenshot](auth0_6.jpg)
+
+* Navigate to your RES Console and log in as Admin or ClusterAdmin
+    * Navigate to Environment Management → General Settings → Identity Provider
+    * Under Single Sign-On, select the pencil next to the status and select SAML
+
+![screenshot](auth0_7.jpg)
+
+    * Change the following details:
+        * Provider Name: Enter a provider name like auth0 (keep provider names in lower case)
+        * Select “Enter metadata document endpoint URL”: Paste the address copied from the Identity Provider Metadata
+        * Provider Email Attribute: Enter "email"
+        * Click Submit
+
+* Back in Auth0, navigate to the Connections tab
+    * Ensure all Database and Social Connections are toggled OFF and the connection your just created is toggled ON under Enterprise
+* Navigate to the AWS Console and to Amazon Cognito
+    * Click on your RES User Pool and navigate to the App Integration tab
+    * Scroll down to the App Client List and select single-sign-on-client
+    * Scroll down to Hosted UI, click Edit, and ensure your provider (ex. auth0) is added as the Identity Provider and the links you added to the application in Auth0 are visible
